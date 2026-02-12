@@ -199,65 +199,28 @@ function validateForm() {
 }
 
 // Handle form submission
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
+contactForm.addEventListener('submit', (e) => {
     // Clear previous status
     statusMessage.textContent = '';
     statusMessage.className = '';
     
     // Validate form
     if (!validateForm()) {
+        e.preventDefault(); // Only prevent submission if validation fails
         statusMessage.textContent = 'Please fix the errors above';
         statusMessage.className = 'error';
         return;
     }
     
-    try {
-        // Show loading state
-        statusMessage.textContent = 'Sending message...';
-        statusMessage.className = '';
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        submitButton.disabled = true;
-        submitButton.textContent = 'Sending...';
-        
-        // Prepare form data for Netlify Forms
-        const formData = new FormData(contactForm);
-        
-        // Submit to Netlify Forms
-        const response = await fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        });
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        // Success
-        statusMessage.textContent = 'Message sent successfully! 🎉 I\'ll get back to you soon.';
-        statusMessage.className = 'success';
-        
-        // Reset form
-        contactForm.reset();
-        formInputs.name.style.borderColor = '';
-        formInputs.email.style.borderColor = '';
-        formInputs.message.style.borderColor = '';
-        
-        // Reset button
-        submitButton.disabled = false;
-        submitButton.textContent = originalText;
-        
-    } catch (error) {
-        console.error('Error:', error);
-        statusMessage.textContent = 'Error sending message. Please try again.';
-        statusMessage.className = 'error';
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        submitButton.disabled = false;
-        submitButton.textContent = 'Send Message';
-    }
+    // Validation passed - show loading state and let form submit naturally to Netlify
+    statusMessage.textContent = 'Sending message...';
+    statusMessage.className = '';
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    
+    // Form will now submit naturally to Netlify Forms (no preventDefault, no fetch)
+    // Netlify will handle the submission and redirect to a success page
 });
 
 // Clear error on input focus
