@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/portfolio/',   // 🔴 IMPORTANT
+  base: '/',
   server: {
     port: 3000,
     strictPort: false,
@@ -13,6 +14,10 @@ export default defineConfig({
     sourcemap: false,
     assetsDir: 'assets',
     rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        thankYou: resolve(__dirname, 'thank-you.html')
+      },
       output: {
         manualChunks: undefined,
       }
