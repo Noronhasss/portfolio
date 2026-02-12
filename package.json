@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Full Stack Portfolio with Node.js, Express, MongoDB, and Vite",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "start": "cd backend && npm start",
+    "build": "cd frontend && npm run build"
+  }
+}

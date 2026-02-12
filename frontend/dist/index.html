@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avil Noronha - Full Stack Developer Portfolio</title>
+  <script type="module" crossorigin src="/assets/index-DWF0lX4M.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-69-L1Qzg.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Avil</span>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link" data-nav="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-nav="about">About</a></li>
+                    <li><a href="#skills" class="nav-link" data-nav="skills">Skills</a></li>
+                    <li><a href="#projects" class="nav-link" data-nav="projects">Projects</a></li>
+                    <li><a href="#experience" class="nav-link" data-nav="experience">Experience</a></li>
+                    <li><a href="#contact" class="nav-link" data-nav="contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Avil Noronha</span>
+            </h1>
+            <p class="hero-subtitle">Full Stack Developer & UI/UX Enthusiast</p>
+            <div class="typing-container">
+                <p class="typing-text">I build amazing web experiences</p>
+                <span class="cursor"></span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll to explore</span>
+                <div class="scroll-indicator"></div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <!-- Premium screen gradient -->
+                    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1" />
+                        <stop offset="35%" style="stop-color:#1a1f3a;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#0f1d3a;stop-opacity:1" />
+                    </linearGradient>
+                    
+                    <!-- Metallic chassis gradient -->
+                    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#505568;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#363d4f;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#1e2332;stop-opacity:1" />
+                    </linearGradient>
+                    
+                    <!-- Screen glow filter -->
+                    <filter id="screenGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                    
+                    <!-- Deep shadow -->
+                    <filter id="deepShadow" x="-100%" y="-100%" width="300%" height="300%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+                        <feOffset dx="3" dy="8" result="offsetblur"/>
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.4"/>
+                        </feComponentTransfer>
+                        <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                    
+                    <!-- Reflection -->
+                    <linearGradient id="gloss" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
+                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.02" />
+                        <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+                    </linearGradient>
+                    
+                    <!-- Glow orb -->
+                    <radialGradient id="orbGlow1">
+                        <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.4" />
+                        <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0" />
+                    </radialGradient>
+                    
+                    <radialGradient id="orbGlow2">
+                        <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.3" />
+                        <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+                
+                <!-- Ambient atmosphere glows -->
+                <ellipse cx="200" cy="80" rx="180" ry="140" fill="url(#orbGlow1)" opacity="0.5"/>
+                <ellipse cx="450" cy="200" rx="160" ry="120" fill="url(#orbGlow2)" opacity="0.3"/>
+                
+                <!-- Floating container -->
+                <g class="floating-laptop" style="animation: float 4s ease-in-out infinite;">
+                    <!-- Laptop base shadow (3D depth) -->
+                    <ellipse cx="300" cy="420" rx="200" ry="45" fill="#000000" opacity="0.3"/>
+                    
+                    <!-- Bottom chassis (3D perspective) -->
+                    <path d="M 120 400 L 480 400 L 495 415 L 105 415 Z" fill="#0a0e27" opacity="0.6"/>
+                    
+                    <!-- Keyboard area with depth -->
+                    <rect x="110" y="365" width="380" height="50" rx="6" fill="url(#chassisGrad)" filter="url(#deepShadow)"/>
+                    <rect x="115" y="370" width="370" height="40" rx="5" fill="#1e2332" opacity="0.95"/>
+                    
+                    <!-- Subtle keyboard texture -->
+                    <rect x="130" y="375" width="8" height="8" fill="#2a3145" opacity="0.7" rx="1"/>
+                    <rect x="155" y="375" width="8" height="8" fill="#2a3145" opacity="0.7" rx="1"/>
+                    <rect x="180" y="375" width="8" height="8" fill="#2a3145" opacity="0.7" rx="1"/>
+                    <rect x="205" y="375" width="8" height="8" fill="#2a3145" opacity="0.7" rx="1"/>
+                    <rect x="450" y="375" width="8" height="8" fill="#2a3145" opacity="0.7" rx="1"/>
+                    <rect x="425" y="375" width="8" height="8" fill="#2a3145" opacity="0.7" rx="1"/>
+                    
+                    <!-- Screen bezel outer (chrome effect) -->
+                    <rect x="100" y="40" width="400" height="320" rx="12" fill="none" stroke="#505568" stroke-width="3" opacity="0.4"/>
+                    <rect x="105" y="35" width="390" height="330" rx="14" fill="none" stroke="#6b7a8f" stroke-width="1" opacity="0.3"/>
+                    
+                    <!-- Main display area -->
+                    <rect x="120" y="55" width="360" height="290" rx="8" fill="url(#screenGrad)" stroke="#6366f1" stroke-width="2" opacity="0.9" filter="url(#deepShadow)"/>
+                    
+                    <!-- Screen top bar (editor UI) -->
+                    <rect x="120" y="55" width="360" height="28" rx="8 8 0 0" fill="#0f172a" opacity="0.8"/>
+                    <circle cx="138" cy="71" r="3.5" fill="#ef4444" opacity="0.85"/>
+                    <circle cx="155" cy="71" r="3.5" fill="#f59e0b" opacity="0.85"/>
+                    <circle cx="172" cy="71" r="3.5" fill="#10b981" opacity="0.85"/>
+                    
+                    <!-- Code content - Line 1 -->
+                    <text x="142" y="105" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#6366f1" font-weight="bold">const</text>
+                    <text x="190" y="105" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#f472b6">buildApp</text>
+                    <text x="278" y="105" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#cbd5e1">=</text>
+                    <text x="305" y="105" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#8b5cf6">()</text>
+                    <text x="330" y="105" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#cbd5e1">=&gt;</text>
+                    
+                    <!-- Code - Line 2 -->
+                    <text x="152" y="130" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#ec4899">&lt;div</text>
+                    <text x="210" y="130" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#06b6d4">className</text>
+                    <text x="310" y="130" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#fbbf24">"container"</text>
+                    <text x="420" y="130" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#ec4899">&gt;</text>
+                    
+                    <!-- Code - Line 3 -->
+                    <text x="162" y="155" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#10b981">return</text>
+                    <text x="230" y="155" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#ec4899">&lt;App</text>
+                    <text x="285" y="155" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#06b6d4">data</text>
+                    <text x="330" y="155" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#ec4899">/&gt;</text>
+                    
+                    <!-- Code - Line 4 -->
+                    <text x="152" y="180" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#8b5cf6">.map</text>
+                    <text x="210" y="180" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#cbd5e1">((item)</text>
+                    <text x="310" y="180" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#cbd5e1">=&gt; (</text>
+                    
+                    <!-- Code - Line 5 -->
+                    <text x="162" y="205" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#ec4899">&lt;Card</text>
+                    <text x="220" y="205" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#06b6d4">key</text>
+                    <text x="255" y="205" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#cbd5e1">=</text>
+                    <text x="278" y="205" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#f59e0b">{item.id}</text>
+                    <text x="370" y="205" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#ec4899">/&gt;</text>
+                    
+                    <!-- Code - Line 6 -->
+                    <text x="152" y="230" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#cbd5e1">))</text>
+                    
+                    <!-- Code - Line 7 -->
+                    <text x="142" y="260" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#10b981">export</text>
+                    <text x="205" y="260" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#10b981">default</text>
+                    <text x="315" y="260" font-family="'Monaco', 'Courier New', monospace" font-size="11" fill="#f472b6">buildApp</text>
+                    
+                    <!-- Blinking cursor -->
+                    <line x1="420" y1="275" x2="420" y2="290" stroke="#34d399" stroke-width="2" opacity="0.95" filter="url(#screenGlow)">
+                        <animate attributeName="opacity" values="1;0;1" dur="1.3s" repeatCount="indefinite"/>
+                    </line>
+                    
+                    <!-- Screen glass reflection -->
+                    <rect x="125" y="60" width="350" height="50" rx="6" fill="url(#gloss)"/>
+                    
+                    <!-- Screen bottom edge accent -->
+                    <line x1="120" y1="340" x2="480" y2="340" stroke="#a78bfa" stroke-width="1" opacity="0.25"/>
+                    
+                    <!-- Left edge accent glow -->
+                    <rect x="115" y="100" width="2" height="200" fill="#6366f1" opacity="0.12"/>
+                    
+                    <!-- Right edge accent glow -->
+                    <rect x="483" y="100" width="2" height="200" fill="#a855f7" opacity="0.12"/>
+                    
+                    <!-- Laptop hinge detail -->
+                    <path d="M 110 365 Q 300 360 490 365" stroke="#4a5568" stroke-width="2" fill="none" opacity="0.3"/>
+                </g>
+                
+                <!-- Floating particles/orbs around the laptop -->
+                <circle cx="80" cy="150" r="4" fill="#6366f1" opacity="0.25" filter="url(#screenGlow)">
+                    <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3.5s" repeatCount="indefinite"/>
+                </circle>
+                
+                <circle cx="520" cy="180" r="3.5" fill="#a855f7" opacity="0.2" filter="url(#screenGlow)">
+                    <animate attributeName="opacity" values="0.12;0.3;0.12" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                
+                <circle cx="110" cy="400" r="2.5" fill="#06b6d4" opacity="0.2" filter="url(#screenGlow)">
+                    <animate attributeName="opacity" values="0.1;0.25;0.1" dur="2.8s" repeatCount="indefinite"/>
+                </circle>
+                
+                <circle cx="500" cy="430" r="3" fill="#ec4899" opacity="0.18" filter="url(#screenGlow)">
+                    <animate attributeName="opacity" values="0.08;0.28;0.08" dur="3.2s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+        </div>
+        <div class="hero-decoration">
+            <div class="decoration-blob blob-1"></div>
+            <div class="decoration-blob blob-2"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate full-stack developer with expertise in building scalable web applications. 
+                        With a strong foundation in both frontend and backend technologies, I love creating 
+                        seamless user experiences combined with robust server-side solutions.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
+                        or writing about web development on my blog.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <img src="/assets/avil.jpg-B1T4BoUf.jpeg" alt="Avil Noronha" class="profile-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5 & CSS3</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript (ES6+)</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React.js</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Responsive Design</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js & Express</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB & Mongoose</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">REST APIs</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Database Design</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 87%"></div>
+                            </div>
+                            <span class="skill-percent">87%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-category">
+                    <h3 class="category-title">Tools & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%"></div>
+                            </div>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">VS Code & DevTools</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 94%"></div>
+                            </div>
+                            <span class="skill-percent">94%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UI/UX Design</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Agile & Scrum</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <svg viewBox="0 0 300 200" class="project-icon">
+                                <rect width="300" height="200" fill="#6366f1"/>
+                                <rect x="20" y="20" width="260" height="160" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="150" cy="70" r="20" fill="white" opacity="0.5"/>
+                                <rect x="50" y="110" width="200" height="30" fill="white" opacity="0.3"/>
+                                <rect x="50" y="150" width="100" height="15" fill="white" opacity="0.2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce solution with product catalog, shopping cart, 
+                            and payment integration. Built with React, Node.js, and MongoDB.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn" target="_blank">
+                                <span>GitHub</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="link-btn" target="_blank">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8.5 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5M7 8l4-4M8.5 1h4v4"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <svg viewBox="0 0 300 200" class="project-icon">
+                                <rect width="300" height="200" fill="#a855f7"/>
+                                <rect x="30" y="30" width="240" height="140" rx="10" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="60" cy="60" r="8" fill="white"/>
+                                <circle cx="90" cy="60" r="8" fill="white" opacity="0.6"/>
+                                <circle cx="120" cy="60" r="8" fill="white" opacity="0.3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A collaborative task management tool with real-time updates, 
+                            team features, and drag-drop interface using Vue.js and Firebase.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn" target="_blank">
+                                <span>GitHub</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="link-btn" target="_blank">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8.5 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5M7 8l4-4M8.5 1h4v4"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder-project">
+                            <svg viewBox="0 0 300 200" class="project-icon">
+                                <rect width="300" height="200" fill="#ec4899"/>
+                                <path d="M50 100 L150 50 L250 100 L150 150 Z" fill="none" stroke="white" stroke-width="2"/>
+                                <circle cx="150" cy="100" r="15" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Social Media Dashboard</h3>
+                        <p class="project-description">
+                            Monitor and manage multiple social media accounts from one dashboard. 
+                            Features analytics, scheduled posts, and performance metrics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Charting</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn" target="_blank">
+                                <span>GitHub</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="link-btn" target="_blank">
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M8.5 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5M7 8l4-4M8.5 1h4v4"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="experience-content">
+                <!-- Work Experience -->
+                <div class="experience-column">
+                    <h3 class="column-title">Work Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Senior Full Stack Developer</h4>
+                                <p class="company">Tech Company Inc. • 2022 - Present</p>
+                                <p class="job-description">
+                                    Led development of microservices architecture, improved API performance by 40%, 
+                                    and mentored junior developers on best practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Full Stack Developer</h4>
+                                <p class="company">Digital Solutions • 2020 - 2022</p>
+                                <p class="job-description">
+                                    Built and maintained multiple client-facing web applications using React and Node.js, 
+                                    managed database migrations, and improved code quality.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Junior Developer</h4>
+                                <p class="company">Web Development Studio • 2019 - 2020</p>
+                                <p class="job-description">
+                                    Developed responsive web pages, fixed bugs, and learned modern web development practices 
+                                    from experienced mentors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="experience-column">
+                    <h3 class="column-title">Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Bachelor's in Computer Science</h4>
+                                <p class="company">University of Technology • 2019</p>
+                                <p class="job-description">
+                                    Graduated with honors. Specialized in web development and software engineering. 
+                                    GPA: 3.8/4.0
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Full Stack Development Bootcamp</h4>
+                                <p class="company">Code Academy • 2018</p>
+                                <p class="job-description">
+                                    Intensive 12-week program covering modern web development stack, 
+                                    databases, and deployment practices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">JavaScript Mastery Certificate</h4>
+                                <p class="company">Udemy • 2017</p>
+                                <p class="job-description">
+                                    Completed comprehensive JavaScript course covering ES6+, async programming, 
+                                    and DOM manipulation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a project in mind? Let's work together!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:noronhaavil58@gmail.com">noronhaavil58@gmail.com</a></p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+918867312043">+91 8867312043</a></p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h4>Location</h4>
+                        <p>Honnavar, Karnataka</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank" title="GitHub">GitHub</a>
+                        <a href="#" class="social-link" target="_blank" title="LinkedIn">LinkedIn</a>
+                        <a href="#" class="social-link" target="_blank" title="Twitter">Twitter</a>
+                        <a href="#" class="social-link" target="_blank" title="Portfolio">Portfolio</a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <!-- Hidden field for Netlify Forms -->
+                    <input type="hidden" name="form-name" value="contact">
+                    
+                    <!-- Honeypot field for spam protection (hidden) -->
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <div class="form-status">
+                        <span id="statusMessage"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed & Built with ❤️ by Your Name</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+</body>
+</html>

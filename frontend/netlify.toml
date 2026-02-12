@@ -1,0 +1,14 @@
+[build]
+  # Directory to build from
+  base = "frontend"
+  
+  # Directory that contains the build output
+  publish = "dist"
+  
+  # Build command
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
